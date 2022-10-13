@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: David Jeremias
+      changes:
+        - createTable:
+            tableName: user_permission
+            schemaName:  public
+            columns:
+              - column:
+                  name: user_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_user
+                    references: user(id)
+              - column:
+                  name: permission_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_permission
+                    references: permission(id)

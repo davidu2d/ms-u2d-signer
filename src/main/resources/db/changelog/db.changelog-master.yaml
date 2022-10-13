@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/db.changelog-create-table-permission.yaml
+  - include:
+      file: db/changelog/db.changelog-create-table-user.yaml
+  - include:
+      file: db/changelog/db.changelog-create-table-user-permission.yaml
