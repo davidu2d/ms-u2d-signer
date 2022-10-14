@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 6
+      author: David Jeremias
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: description
+                  value: ROLE_ADMIN
+            schemaName: public
+            tableName: permission

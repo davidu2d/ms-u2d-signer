@@ -11,7 +11,7 @@ public class PasswordUtil {
 
     public static void main(String[] args) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String passEncod = encoder("415782@Dv");
+        String passEncod = encoder("415782@U2d");
         System.out.println(passEncod);
         boolean match = passwordEncoder.matches("415782@Dv", passEncod);
         System.out.println(match);

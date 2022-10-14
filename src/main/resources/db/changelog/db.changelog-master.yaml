@@ -5,3 +5,13 @@ databaseChangeLog:
       file: db/changelog/db.changelog-create-table-user.yaml
   - include:
       file: db/changelog/db.changelog-create-table-user-permission.yaml
+  - include:
+      file: db/changelog/db.changelog-create-table-oauth-client-details.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-table-oauth-client-details.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-table-permission.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-table-user.yaml
+  - include:
+      file: db/changelog/db.changelog-insert-table-user-permission.yaml

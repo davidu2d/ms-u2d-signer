@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 8
+      author: David Jeremias
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: user_id
+                  value: 1
+              - column:
+                  name: permission_id
+                  value: 1
+            schemaName: public
+            tableName: user_permission

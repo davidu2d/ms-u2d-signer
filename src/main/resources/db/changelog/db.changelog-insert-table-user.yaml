@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 7
+      author: David Jeremias
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: name
+                  value: David Jeremias
+              - column:
+                  name: cpf_cnpj
+                  value: 01696587166
+              - column:
+                  name: email
+                  value: u2dtecnologia@gmail.com
+              - column:
+                  name: password
+                  value: $2a$10$RzbrCQ7OZc0R3DpJ6KVtCuxUHFQo8ryHNVeTp60nObvk5zk9QJ0iO
+            schemaName: public
+            tableName: user
