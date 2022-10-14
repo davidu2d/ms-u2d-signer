@@ -3,6 +3,8 @@ package com.u2d.signer.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.HashMap;
+import java.util.Map;
 
 @Getter
 @Setter
@@ -10,12 +12,14 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "oauth_client_details")
 public class Client {
 
     @Id
     @Column(name = "client_id")
+    @EqualsAndHashCode.Include
     private String clientId;
 
     @Column(name = "client_secret")
@@ -44,6 +48,8 @@ public class Client {
 
     @Column(name = "additional_information")
     private String additionalInformation;
+    //@ElementCollection
+    //private Map<String, Object> additionalInformation = new HashMap<>();
 
     @Column(name = "autoapprove")
     private String autoapprove;

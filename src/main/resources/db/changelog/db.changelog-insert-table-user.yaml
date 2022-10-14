@@ -10,7 +10,7 @@ databaseChangeLog:
                   value: David Jeremias
               - column:
                   name: cpf_cnpj
-                  value: 01696587166
+                  value: '01696587166'
               - column:
                   name: email
                   value: u2dtecnologia@gmail.com

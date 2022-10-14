@@ -29,9 +29,13 @@ public class ClientServiceImpl implements ClientService {
     }
 
     public ClientResponse createClient(ClientRequest clientRequest) {
-        this.repository.findById(clientRequest.getClientId()).orElseThrow(() -> new ResourceExistsException(Client.class));
+        Optional<Client> c = this.repository.findById(clientRequest.getClientId());
+
+        if (c.isPresent())
+            throw new ResourceExistsException(Client.class);
 
         Client client = converterDtoToEntity(clientRequest);
+        client.setClientSecret(PasswordUtil.encoder(clientRequest.getClientSecret()));
         this.repository.save(client);
         return modelMapper.map(client, ClientResponse.class);
     }
